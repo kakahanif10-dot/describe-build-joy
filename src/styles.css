@@ -185,6 +185,10 @@
   --muted-foreground: var(--header-dark-muted);
 }
 
+.site-header-scrolled :where(a, span) {
+  color: var(--header-dark-foreground);
+}
+
 /* The landing page is deliberately line-free, except for the Sign in control. */
 .landing-page :where([class*="border"]):not(.sign-in-outline) {
   border-color: transparent !important;
