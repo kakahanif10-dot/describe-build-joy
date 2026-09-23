@@ -150,7 +150,6 @@
 /* Hero band only: soft pastel gradient fading into the black page below */
 .hero-pastel {
   position: relative;
-  isolation: isolate;
   color: oklch(0 0 0);
 
   --foreground: oklch(0 0 0);
