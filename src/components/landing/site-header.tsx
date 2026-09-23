@@ -38,13 +38,7 @@ export function SiteHeader() {
         )}
       >
         <Link href="/" aria-label="SUPERINTELLIGENS home">
-          <SuperintelligensLogo
-            className="transition-colors duration-500"
-            markClassName={cn(
-              'transition-[filter] duration-500',
-              !scrolled && 'brightness-0',
-            )}
-          />
+          <SuperintelligensLogo className="transition-colors duration-500" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
