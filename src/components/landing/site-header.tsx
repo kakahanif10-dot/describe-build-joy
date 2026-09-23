@@ -32,13 +32,19 @@ export function SiteHeader() {
     >
       <div
         className={cn(
-          'flex w-full max-w-6xl items-center justify-between rounded-full border border-transparent px-4 py-2.5 transition-all duration-300',
+          'flex w-full max-w-6xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500',
           scrolled &&
-            'border-border bg-background/70 backdrop-blur-xl glow-border',
+            'site-header-scrolled bg-background/70 backdrop-blur-xl',
         )}
       >
         <Link href="/" aria-label="SUPERINTELLIGENS home">
-          <SuperintelligensLogo />
+          <SuperintelligensLogo
+            className="transition-colors duration-500"
+            markClassName={cn(
+              'transition-[filter] duration-500',
+              !scrolled && 'brightness-0',
+            )}
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -57,8 +63,8 @@ export function SiteHeader() {
           <Button
             render={<Link href="/login" />}
             nativeButton={false}
-            variant="ghost"
-            className="hidden text-muted-foreground hover:text-foreground sm:inline-flex"
+            variant="outline"
+            className="sign-in-outline hidden rounded-full border-outline-subtle bg-transparent text-muted-foreground hover:bg-transparent hover:text-foreground sm:inline-flex"
           >
             Sign in
           </Button>

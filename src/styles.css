@@ -17,6 +17,7 @@
   --color-brand-blue: var(--brand-blue);
   --color-brand-mid: var(--brand-mid);
   --color-brand-violet: var(--brand-violet);
+  --color-outline-subtle: var(--outline-subtle);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -92,6 +93,9 @@
 
   /* Single very subtle accent — used only on one word, hover, and active states */
   --accent-glow: oklch(0.62 0.26 292);
+  --header-dark-foreground: oklch(0.985 0 0);
+  --header-dark-muted: oklch(0.78 0 0);
+  --outline-subtle: oklch(0.58 0 0);
 }
 
 @layer base {
@@ -174,6 +178,24 @@
       color-mix(in srgb, #efaade 40%, #000) 91%,
       var(--background) 100%
     );
+}
+
+.site-header-scrolled {
+  --foreground: var(--header-dark-foreground);
+  --muted-foreground: var(--header-dark-muted);
+}
+
+/* The landing page is deliberately line-free, except for the Sign in control. */
+.landing-page :where([class*="border"]):not(.sign-in-outline) {
+  border-color: transparent !important;
+}
+
+.landing-page .glow-border {
+  box-shadow: none;
+}
+
+.landing-page .glow-border:focus-within {
+  box-shadow: none;
 }
 
 .workspace-neutral-lines {
