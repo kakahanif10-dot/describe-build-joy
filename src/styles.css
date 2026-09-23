@@ -190,6 +190,10 @@
   border-color: transparent !important;
 }
 
+.landing-page .sign-in-outline {
+  border-color: var(--outline-subtle) !important;
+}
+
 .landing-page .glow-border {
   box-shadow: none;
 }

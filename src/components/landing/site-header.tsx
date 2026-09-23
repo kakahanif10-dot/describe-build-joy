@@ -52,7 +52,7 @@ export function SiteHeader() {
             <a
               key={item.label}
               href={item.href}
-              className="rounded-full px-3.5 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="rounded-full px-3.5 py-1.5 text-sm text-foreground transition-colors"
             >
               {item.label}
             </a>
@@ -64,7 +64,7 @@ export function SiteHeader() {
             render={<Link href="/login" />}
             nativeButton={false}
             variant="outline"
-            className="sign-in-outline hidden rounded-full border-outline-subtle bg-transparent text-muted-foreground hover:bg-transparent hover:text-foreground sm:inline-flex"
+            className="sign-in-outline hidden rounded-full border-outline-subtle bg-transparent text-foreground hover:bg-transparent sm:inline-flex"
           >
             Sign in
           </Button>
